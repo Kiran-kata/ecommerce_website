@@ -7,6 +7,17 @@ A comprehensive, fully functional e-commerce website that replicates Amazon's co
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
+## 🚀 Live Demo
+
+**[View Live Demo](https://kiran-kata.github.io/ecommerce_website/)**
+
+Experience the full e-commerce functionality:
+- Browse products across multiple categories
+- Sign in/Sign up with authentication
+- Add items to cart and manage quantities
+- Complete checkout process
+- Track your orders
+
 ## 🌟 Features
 
 ### Core Functionality
