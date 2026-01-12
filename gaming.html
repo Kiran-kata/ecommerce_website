@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Accessories - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option selected>Gaming</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search in Gaming">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="index.html" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> › <span>Gaming Accessories</span>
+    </div>
+
+    <!-- Gaming Page -->
+    <div class="products-page">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Gaming Categories</h3>
+                <ul class="filter-list">
+                    <li><a href="#">Gaming Headsets</a></li>
+                    <li><a href="#">Gaming Keyboards</a></li>
+                    <li><a href="#">Gaming Mice</a></li>
+                    <li><a href="#">Gaming Chairs</a></li>
+                    <li><a href="#">Controllers</a></li>
+                    <li><a href="#">Gaming Monitors</a></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Platform</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> PC</label>
+                    <label><input type="checkbox"> PlayStation</label>
+                    <label><input type="checkbox"> Xbox</label>
+                    <label><input type="checkbox"> Nintendo Switch</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> Under $50</label>
+                    <label><input type="checkbox"> $50 to $100</label>
+                    <label><input type="checkbox"> $100 to $200</label>
+                    <label><input type="checkbox"> $200 & Above</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="products-main">
+            <div class="products-header">
+                <h1>Gaming Accessories</h1>
+                <div class="products-sort">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Best Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-list">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=400&fit=crop" alt="Gaming Headset">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Pro Gaming Headset - 7.1 Surround Sound, RGB LED</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(28,456)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$69.99</span>
+                            <span class="price-original">$129.99</span>
+                            <span class="price-discount">(46% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Pro Gaming Headset', 69.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=400&fit=crop" alt="Gaming Keyboard">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Mechanical Gaming Keyboard - RGB Backlit, Anti-ghosting</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(32,123)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$89.99</span>
+                            <span class="price-original">$149.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Gaming Keyboard', 89.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=400&fit=crop" alt="Gaming Mouse">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Wireless Gaming Mouse - 16000 DPI, 8 Programmable Buttons</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(19,876)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$54.99</span>
+                            <span class="price-original">$99.99</span>
+                            <span class="price-discount">(45% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Wireless Gaming Mouse', 54.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?w=400&h=400&fit=crop" alt="Gaming Chair">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Ergonomic Gaming Chair - Lumbar Support, Adjustable</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.3</span>
+                            <span class="review-count">(14,567)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$199.99</span>
+                            <span class="price-original">$349.99</span>
+                            <span class="price-discount">(43% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Gaming Chair', 199.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=400&fit=crop" alt="Gaming Monitor">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">27" Gaming Monitor - 144Hz, 1ms, QHD Display</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(11,234)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$299.99</span>
+                            <span class="price-original">$499.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Gaming Monitor 27inch', 299.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=400&h=400&fit=crop" alt="Gaming Controller">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Wireless Gaming Controller - Compatible with PC & Console</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(25,789)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$59.99</span>
+                            <span class="price-original">$79.99</span>
+                            <span class="price-discount">(25% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Gaming Controller', 59.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

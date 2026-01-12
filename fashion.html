@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option selected>Fashion</option>
+                        <option>Books</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search in Fashion">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="index.html" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> › <span>Fashion</span>
+    </div>
+
+    <!-- Fashion Page -->
+    <div class="products-page">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Fashion Categories</h3>
+                <ul class="filter-list">
+                    <li><a href="#">Women's Fashion</a></li>
+                    <li><a href="#">Men's Fashion</a></li>
+                    <li><a href="#">Girls' Fashion</a></li>
+                    <li><a href="#">Boys' Fashion</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Jewelry</a></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Size</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> XS</label>
+                    <label><input type="checkbox"> S</label>
+                    <label><input type="checkbox"> M</label>
+                    <label><input type="checkbox"> L</label>
+                    <label><input type="checkbox"> XL</label>
+                    <label><input type="checkbox"> XXL</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> Under $25</label>
+                    <label><input type="checkbox"> $25 to $50</label>
+                    <label><input type="checkbox"> $50 to $100</label>
+                    <label><input type="checkbox"> $100 & Above</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="products-main">
+            <div class="products-header">
+                <h1>Fashion</h1>
+                <div class="products-sort">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-list">
+                <!-- Fashion Products -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop" alt="Dress">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Women's Summer Floral Maxi Dress</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                            <span class="review-count">(8,234)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$39.99</span>
+                            <span class="price-original">$79.99</span>
+                            <span class="price-discount">(50% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Summer Floral Dress', 39.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop" alt="Jeans">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Men's Classic Slim Fit Jeans - Multiple Colors</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2</span>
+                            <span class="review-count">(12,456)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$44.99</span>
+                            <span class="price-original">$89.99</span>
+                            <span class="price-discount">(50% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Slim Fit Jeans', 44.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop" alt="Sneakers">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Women's Comfortable Running Sneakers</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(15,789)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$59.99</span>
+                            <span class="price-original">$99.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Running Sneakers', 59.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop" alt="Jacket">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Men's Leather Jacket - Classic Style</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(6,543)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$129.99</span>
+                            <span class="price-original">$249.99</span>
+                            <span class="price-discount">(48% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Leather Jacket', 129.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=400&h=400&fit=crop" alt="Handbag">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Designer Crossbody Handbag - Genuine Leather</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(9,876)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$79.99</span>
+                            <span class="price-original">$149.99</span>
+                            <span class="price-discount">(47% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Crossbody Handbag', 79.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop" alt="Watch">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Luxury Fashion Watch - Stainless Steel</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                            <span class="review-count">(4,321)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$149.99</span>
+                            <span class="price-original">$299.99</span>
+                            <span class="price-discount">(50% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Fashion Watch', 149.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

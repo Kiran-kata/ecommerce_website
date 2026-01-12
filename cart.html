@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search Amazon">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="#" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Content -->
+    <div class="cart-page">
+        <div class="cart-container">
+            <!-- Cart Items -->
+            <div class="cart-main">
+                <div class="cart-header">
+                    <h1>Shopping Cart</h1>
+                    <span class="cart-price-label">Price</span>
+                </div>
+                
+                <div id="cart-items-container">
+                    <!-- Empty cart message -->
+                    <div id="empty-cart" class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h2>Your Amazon Cart is empty</h2>
+                        <p>Check your Saved for later items below or <a href="index.html">continue shopping</a></p>
+                    </div>
+                </div>
+
+                <div class="cart-footer">
+                    <div class="subtotal-section">
+                        <span class="subtotal-text">Subtotal (<span id="cart-item-count">0</span> items): </span>
+                        <span class="subtotal-price">$<span id="cart-subtotal">0.00</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <div class="subtotal-large">
+                        <span>Subtotal (<span id="summary-item-count">0</span> items): </span>
+                        <span class="price-large">$<span id="summary-subtotal">0.00</span></span>
+                    </div>
+                    <label class="gift-checkbox">
+                        <input type="checkbox">
+                        This order contains a gift
+                    </label>
+                    <button class="btn-checkout">Proceed to checkout</button>
+                </div>
+
+                <!-- Suggested Products -->
+                <div class="suggested-products">
+                    <h3>Customers who bought items in your cart also bought</h3>
+                    <div class="suggested-item">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=200&h=200&fit=crop" alt="Product">
+                        <div class="suggested-info">
+                            <p class="suggested-name">USB-C Cable 6ft - Fast Charging</p>
+                            <div class="suggested-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5</span>
+                            </div>
+                            <p class="suggested-price">$12.99</p>
+                            <button class="btn-add-suggested" onclick="addToCart('USB-C Cable', 12.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="suggested-item">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=200&h=200&fit=crop" alt="Product">
+                        <div class="suggested-info">
+                            <p class="suggested-name">Phone Stand Holder for Desk</p>
+                            <div class="suggested-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.2</span>
+                            </div>
+                            <p class="suggested-price">$9.99</p>
+                            <button class="btn-add-suggested" onclick="addToCart('Phone Stand', 9.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Products -->
+        <div class="cart-recommendations">
+            <h2>Inspired by your shopping trends</h2>
+            <div class="recommendation-grid">
+                <div class="recommendation-item">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop" alt="Product">
+                    <p class="rec-name">Premium Headphones</p>
+                    <div class="rec-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="rec-price">$79.99</p>
+                </div>
+                <div class="recommendation-item">
+                    <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?w=300&h=300&fit=crop" alt="Product">
+                    <p class="rec-name">Smart Watch</p>
+                    <div class="rec-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="rec-price">$129.99</p>
+                </div>
+                <div class="recommendation-item">
+                    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300&h=300&fit=crop" alt="Product">
+                    <p class="rec-name">Wireless Mouse</p>
+                    <div class="rec-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="rec-price">$44.99</p>
+                </div>
+                <div class="recommendation-item">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300&h=300&fit=crop" alt="Product">
+                    <p class="rec-name">Bluetooth Speaker</p>
+                    <div class="rec-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="rec-price">$89.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="product-title">Product Details - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search Amazon">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="index.html" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Detail Page -->
+    <div class="product-detail-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> › <a href="electronics.html">Electronics</a> › <span id="breadcrumb-product">Product</span>
+        </div>
+
+        <div class="product-detail-container">
+            <!-- Product Images -->
+            <div class="product-images-section">
+                <div class="thumbnail-list">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Thumb 1" class="thumbnail active" onclick="changeMainImage(this.src.replace('w=100&h=100', 'w=600&h=600'))">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100&h=100&fit=crop" alt="Thumb 2" class="thumbnail" onclick="changeMainImage(this.src.replace('w=100&h=100', 'w=600&h=600'))">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100&h=100&fit=crop" alt="Thumb 3" class="thumbnail" onclick="changeMainImage(this.src.replace('w=100&h=100', 'w=600&h=600'))">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=100&h=100&fit=crop" alt="Thumb 4" class="thumbnail" onclick="changeMainImage(this.src.replace('w=100&h=100', 'w=600&h=600'))">
+                </div>
+                <div class="main-image-container">
+                    <img id="main-product-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop" alt="Product">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info-section">
+                <h1 id="product-name">Premium Wireless Noise Cancelling Headphones</h1>
+                <div class="product-rating-section">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="rating-number">4.5</span>
+                    </div>
+                    <span class="rating-count">12,543 ratings</span>
+                    <span class="separator">|</span>
+                    <a href="#reviews" class="answered-questions">1,234 answered questions</a>
+                </div>
+                
+                <div class="product-badges">
+                    <span class="badge-choice">Amazon's Choice</span>
+                    <span class="badge-best">Best Seller in Headphones</span>
+                </div>
+
+                <hr>
+
+                <div class="price-section">
+                    <span class="price-label">Price:</span>
+                    <span class="price-main">$79.99</span>
+                    <span class="price-original">$99.99</span>
+                    <span class="price-save">Save $20.00 (20%)</span>
+                </div>
+
+                <div class="product-details-info">
+                    <table>
+                        <tr>
+                            <td class="detail-label">Brand</td>
+                            <td class="detail-value">Premium Audio</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Model</td>
+                            <td class="detail-value">WH-1000XM5</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Color</td>
+                            <td class="detail-value">Black</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Connectivity</td>
+                            <td class="detail-value">Bluetooth 5.0, Wired</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="product-features">
+                    <h3>About this item</h3>
+                    <ul>
+                        <li>Industry-leading noise cancellation technology</li>
+                        <li>Up to 30 hours of battery life with quick charging</li>
+                        <li>Superior sound quality with LDAC audio coding</li>
+                        <li>Comfortable lightweight design for all-day wear</li>
+                        <li>Multipoint connection - Connect to multiple devices</li>
+                        <li>Speak-to-Chat technology automatically pauses playback</li>
+                        <li>Touch controls for music, calls, and voice assistant</li>
+                        <li>Includes carrying case and audio cable</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Buy Box -->
+            <div class="buy-box">
+                <div class="buy-box-price">
+                    <span class="buy-price">$79.99</span>
+                    <p class="free-delivery"><i class="fas fa-truck"></i> FREE delivery <strong>Tomorrow, Jan 13</strong></p>
+                    <p class="delivery-location">Or fastest delivery <strong>Today</strong>. Order within <span class="time-left">3 hrs 25 mins</span></p>
+                    <p class="location-link"><i class="fas fa-map-marker-alt"></i> Deliver to New York 10001</p>
+                </div>
+
+                <p class="in-stock"><i class="fas fa-check-circle"></i> In Stock</p>
+
+                <div class="quantity-section">
+                    <label for="quantity">Quantity:</label>
+                    <select id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <button class="btn-add-to-cart-detail" onclick="addToCartFromDetail()">Add to Cart</button>
+                <button class="btn-buy-now" onclick="buyNow()">Buy Now</button>
+
+                <div class="secure-transaction">
+                    <i class="fas fa-lock"></i> Secure transaction
+                </div>
+
+                <table class="buy-box-info">
+                    <tr>
+                        <td>Ships from</td>
+                        <td>Amazon.com</td>
+                    </tr>
+                    <tr>
+                        <td>Sold by</td>
+                        <td>Amazon.com</td>
+                    </tr>
+                    <tr>
+                        <td>Returns</td>
+                        <td>Eligible for Return, Refund or Replacement within 30 days</td>
+                    </tr>
+                </table>
+
+                <button class="btn-add-to-list"><i class="fas fa-heart"></i> Add to Wish List</button>
+            </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="product-description-section">
+            <h2>Product Description</h2>
+            <p>Experience unparalleled audio quality with our Premium Wireless Noise Cancelling Headphones. Featuring industry-leading noise cancellation technology, these headphones deliver an immersive listening experience whether you're at home, in the office, or on the go.</p>
+            <p>The advanced noise cancellation adapts to your environment, blocking out unwanted ambient sound so you can focus on what matters most - your music, podcasts, or calls. With up to 30 hours of battery life, you can enjoy your audio content all day without worrying about recharging.</p>
+            <p>Designed for comfort and style, these headphones feature premium materials and ergonomic cushions that provide a perfect fit for extended listening sessions. The intuitive touch controls let you manage your music, calls, and voice assistant with simple gestures.</p>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="reviews-section" id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review-summary">
+                <div class="review-score">
+                    <span class="score-number">4.5</span>
+                    <div class="score-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>12,543 global ratings</p>
+                </div>
+                <div class="review-bars">
+                    <div class="review-bar-item">
+                        <span>5 star</span>
+                        <div class="bar"><div class="bar-fill" style="width: 72%"></div></div>
+                        <span>72%</span>
+                    </div>
+                    <div class="review-bar-item">
+                        <span>4 star</span>
+                        <div class="bar"><div class="bar-fill" style="width: 18%"></div></div>
+                        <span>18%</span>
+                    </div>
+                    <div class="review-bar-item">
+                        <span>3 star</span>
+                        <div class="bar"><div class="bar-fill" style="width: 6%"></div></div>
+                        <span>6%</span>
+                    </div>
+                    <div class="review-bar-item">
+                        <span>2 star</span>
+                        <div class="bar"><div class="bar-fill" style="width: 2%"></div></div>
+                        <span>2%</span>
+                    </div>
+                    <div class="review-bar-item">
+                        <span>1 star</span>
+                        <div class="bar"><div class="bar-fill" style="width: 2%"></div></div>
+                        <span>2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-list">
+                <div class="review-item">
+                    <div class="review-header">
+                        <img src="https://ui-avatars.com/api/?name=John+Smith&background=random" alt="Reviewer">
+                        <div>
+                            <strong>John Smith</strong>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Best headphones I've ever owned!</h4>
+                    <p class="review-date">Reviewed in the United States on January 10, 2026</p>
+                    <p class="review-text">These headphones are absolutely amazing! The noise cancellation is incredible - I can't hear anything around me when I have them on. Sound quality is top-notch, and they're super comfortable even after wearing them for hours.</p>
+                    <div class="review-helpful">
+                        <button><i class="fas fa-thumbs-up"></i> Helpful</button>
+                        <span>234 people found this helpful</span>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=random" alt="Reviewer">
+                        <div>
+                            <strong>Sarah Johnson</strong>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Great quality, minor connectivity issues</h4>
+                    <p class="review-date">Reviewed in the United States on January 8, 2026</p>
+                    <p class="review-text">Overall very satisfied with the purchase. Sound quality is excellent and noise cancellation works great. Had some minor Bluetooth connectivity issues initially, but they resolved after a firmware update.</p>
+                    <div class="review-helpful">
+                        <button><i class="fas fa-thumbs-up"></i> Helpful</button>
+                        <span>89 people found this helpful</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

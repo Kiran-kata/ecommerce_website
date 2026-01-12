@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search Amazon">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="index.html" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="orders-page">
+        <h1>Your Orders</h1>
+        
+        <div class="orders-filter">
+            <button class="filter-btn active" onclick="filterOrders('all')">All Orders</button>
+            <button class="filter-btn" onclick="filterOrders('Processing')">Processing</button>
+            <button class="filter-btn" onclick="filterOrders('Shipped')">Shipped</button>
+            <button class="filter-btn" onclick="filterOrders('Delivered')">Delivered</button>
+        </div>
+
+        <div class="orders-list" id="orders-list">
+            <!-- Orders will be loaded here -->
+        </div>
+
+        <div class="no-orders" id="no-orders" style="display: none;">
+            <i class="fas fa-shopping-bag"></i>
+            <h2>No orders yet</h2>
+            <p>Looks like you haven't made any orders yet.</p>
+            <a href="index.html" class="btn-start-shopping">Start Shopping</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        let allOrders = [];
+        let currentFilter = 'all';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadOrders();
+            updateCartCount();
+            
+            const userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                document.querySelector('.account-hello').textContent = `Hello, ${userEmail.split('@')[0]}`;
+            }
+            
+            // Make Returns & Orders clickable
+            document.querySelector('.header-orders').addEventListener('click', () => {
+                window.location.href = 'orders.html';
+            });
+        });
+
+        function loadOrders() {
+            allOrders = JSON.parse(localStorage.getItem('orders')) || [];
+            
+            if (allOrders.length === 0) {
+                document.getElementById('no-orders').style.display = 'block';
+                document.getElementById('orders-list').style.display = 'none';
+                return;
+            }
+            
+            renderOrders();
+        }
+
+        function renderOrders() {
+            const ordersList = document.getElementById('orders-list');
+            let html = '';
+            
+            const filteredOrders = currentFilter === 'all' 
+                ? allOrders 
+                : allOrders.filter(o => o.status === currentFilter);
+            
+            if (filteredOrders.length === 0) {
+                ordersList.innerHTML = '<p class="no-filtered-orders">No orders found with this status</p>';
+                return;
+            }
+            
+            filteredOrders.forEach(order => {
+                const statusClass = order.status.toLowerCase();
+                html += `
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <p><strong>Order #${order.id}</strong></p>
+                                <p>Placed on ${new Date(order.date).toLocaleDateString()}</p>
+                            </div>
+                            <div class="order-status status-${statusClass}">
+                                ${order.status}
+                            </div>
+                        </div>
+                        <div class="order-body">
+                            <div class="order-items-preview">
+                                ${order.items.slice(0, 3).map(item => `
+                                    <img src="${item.image}" alt="${item.name}">
+                                `).join('')}
+                                ${order.items.length > 3 ? `<span class="more-items">+${order.items.length - 3} more</span>` : ''}
+                            </div>
+                            <div class="order-details">
+                                <p><strong>Total:</strong> $${order.total.toFixed(2)}</p>
+                                <p><strong>Items:</strong> ${order.items.reduce((sum, item) => sum + item.quantity, 0)}</p>
+                                <p><strong>Delivered to:</strong> ${order.address.fullName}</p>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button onclick="viewOrderDetails('${order.id}')">View Order Details</button>
+                            <button onclick="trackOrder('${order.id}')">Track Package</button>
+                            <button onclick="returnOrder('${order.id}')">Return or Replace Items</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            ordersList.innerHTML = html;
+        }
+
+        function filterOrders(status) {
+            currentFilter = status;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            renderOrders();
+        }
+
+        function viewOrderDetails(orderId) {
+            window.location.href = `order-confirmation.html?orderId=${orderId}`;
+        }
+
+        function trackOrder(orderId) {
+            alert(`Tracking information for Order ${orderId}\n\nYour package is on the way!\nEstimated delivery: Tomorrow, January 13`);
+        }
+
+        function returnOrder(orderId) {
+            if (confirm('Do you want to return this order?')) {
+                alert('Return request submitted. You will receive a confirmation email shortly.');
+            }
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCountElements = document.querySelectorAll('.cart-count');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            
+            cartCountElements.forEach(element => {
+                element.textContent = totalItems;
+            });
+        }
+    </script>
+</body>
+</html>

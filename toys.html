@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys & Games - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option selected>Toys & Games</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search in Toys & Games">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="index.html" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> › <span>Toys & Games</span>
+    </div>
+
+    <!-- Toys Page -->
+    <div class="products-page">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Toys Categories</h3>
+                <ul class="filter-list">
+                    <li><a href="#">Action Figures & Playsets</a></li>
+                    <li><a href="#">Building Toys</a></li>
+                    <li><a href="#">Dolls & Accessories</a></li>
+                    <li><a href="#">Educational Toys</a></li>
+                    <li><a href="#">Outdoor Play</a></li>
+                    <li><a href="#">Board Games</a></li>
+                    <li><a href="#">Puzzles</a></li>
+                    <li><a href="#">RC Vehicles</a></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Age Range</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> 0-2 years</label>
+                    <label><input type="checkbox"> 3-5 years</label>
+                    <label><input type="checkbox"> 6-8 years</label>
+                    <label><input type="checkbox"> 9-12 years</label>
+                    <label><input type="checkbox"> 13+ years</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> Under $15</label>
+                    <label><input type="checkbox"> $15 to $25</label>
+                    <label><input type="checkbox"> $25 to $50</label>
+                    <label><input type="checkbox"> $50 to $100</label>
+                    <label><input type="checkbox"> $100 & Above</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Brand</h3>
+                <ul class="filter-list">
+                    <li><label><input type="checkbox"> LEGO</label></li>
+                    <li><label><input type="checkbox"> Barbie</label></li>
+                    <li><label><input type="checkbox"> Hot Wheels</label></li>
+                    <li><label><input type="checkbox"> Nerf</label></li>
+                    <li><label><input type="checkbox"> Fisher-Price</label></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="products-main">
+            <div class="products-header">
+                <h1>Toys & Games</h1>
+                <div class="products-sort">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Best Sellers</option>
+                        <option>Avg. Customer Review</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-list">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558060370-d644479c6e42?w=400&h=400&fit=crop" alt="Building Blocks">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Building Blocks Set - 1000 Pieces Creative Construction Kit</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(18,456)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$49.99</span>
+                            <span class="price-original">$79.99</span>
+                            <span class="price-discount">(38% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Building Blocks Set 1000 Pieces', 49.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1579613832111-ac7dfcc7723f?w=400&h=400&fit=crop" alt="RC Car">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Remote Control Racing Car - High Speed RC Vehicle with LED Lights</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(12,345)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$39.99</span>
+                            <span class="price-original">$69.99</span>
+                            <span class="price-discount">(43% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('RC Racing Car', 39.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&h=400&fit=crop" alt="Board Game">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Strategy Board Game - Family Fun for Ages 8+</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(24,678)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$29.99</span>
+                            <span class="price-original">$49.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Strategy Board Game', 29.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&h=400&fit=crop" alt="Action Figure">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Superhero Action Figure Set - 12" Collectible with Accessories</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.3</span>
+                            <span class="review-count">(9,876)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$24.99</span>
+                            <span class="price-original">$39.99</span>
+                            <span class="price-discount">(38% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Superhero Action Figure', 24.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=400&h=400&fit=crop" alt="Doll">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Fashion Doll with Dream House Playset - Includes Furniture</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(15,234)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$69.99</span>
+                            <span class="price-original">$99.99</span>
+                            <span class="price-discount">(30% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Fashion Doll Dream House', 69.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&h=400&fit=crop" alt="Puzzle">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">1000 Piece Jigsaw Puzzle - Premium Quality Educational</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(11,567)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$19.99</span>
+                            <span class="price-original">$34.99</span>
+                            <span class="price-discount">(43% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('1000 Piece Puzzle', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=400&fit=crop" alt="Nerf Blaster">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Elite Foam Dart Blaster - Includes 50 Darts and Target</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(20,123)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$34.99</span>
+                            <span class="price-original">$54.99</span>
+                            <span class="price-discount">(36% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Foam Dart Blaster', 34.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=400&fit=crop" alt="Outdoor Toy">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Kids Outdoor Play Equipment - Swing and Slide Set</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.4</span>
+                            <span class="review-count">(7,890)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$149.99</span>
+                            <span class="price-original">$249.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Outdoor Play Equipment', 149.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1619804575580-ea5c92e5d61c?w=400&h=400&fit=crop" alt="STEM Toy">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">STEM Learning Kit - Robotics and Coding for Kids 8+</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(13,456)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$59.99</span>
+                            <span class="price-original">$99.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('STEM Robotics Kit', 59.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599508704512-2f19efd1e35f?w=400&h=400&fit=crop" alt="Toy Car Set">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Die-Cast Car Collection - 20 Pack Racing Vehicle Set</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(16,789)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$29.99</span>
+                            <span class="price-original">$49.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Die-Cast Car Collection 20 Pack', 29.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <h2 class="checkout-title">Checkout</h2>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-page">
+        <div class="checkout-main">
+            <!-- Step 1: Delivery Address -->
+            <div class="checkout-section">
+                <div class="section-header">
+                    <span class="section-number">1</span>
+                    <h2>Delivery Address</h2>
+                </div>
+                <div class="section-content" id="address-section">
+                    <form id="addressForm">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                        <input type="text" id="address" placeholder="Street Address" required>
+                        <input type="text" id="city" placeholder="City" required>
+                        <div class="form-row">
+                            <input type="text" id="state" placeholder="State" required>
+                            <input type="text" id="zip" placeholder="ZIP Code" required>
+                        </div>
+                        <button type="submit" class="btn-continue">Use this address</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Step 2: Payment Method -->
+            <div class="checkout-section disabled" id="payment-section-container">
+                <div class="section-header">
+                    <span class="section-number">2</span>
+                    <h2>Payment Method</h2>
+                </div>
+                <div class="section-content" id="payment-section">
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span><i class="fas fa-credit-card"></i> Credit or Debit Card</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="upi">
+                            <span><i class="fas fa-mobile-alt"></i> UPI</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="netbanking">
+                            <span><i class="fas fa-university"></i> Net Banking</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cod">
+                            <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                        </label>
+                    </div>
+                    
+                    <div id="card-details" class="payment-details">
+                        <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19">
+                        <input type="text" id="cardName" placeholder="Name on Card">
+                        <div class="form-row">
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                            <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+                        </div>
+                    </div>
+                    
+                    <button class="btn-continue" onclick="continueToReview()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Review Order -->
+            <div class="checkout-section disabled" id="review-section-container">
+                <div class="section-header">
+                    <span class="section-number">3</span>
+                    <h2>Review Items and Delivery</h2>
+                </div>
+                <div class="section-content" id="review-section">
+                    <div class="delivery-date">
+                        <h3><i class="fas fa-truck"></i> Delivery: Tomorrow, January 13</h3>
+                    </div>
+                    <div id="review-items"></div>
+                    <button class="btn-place-order" onclick="placeOrder()">Place your order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="order-summary">
+            <button class="btn-place-order-top" onclick="placeOrder()">Place your order</button>
+            <p class="order-agreement">By placing your order, you agree to Amazon's privacy notice and conditions of use.</p>
+            
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Items (<span id="summary-items">0</span>):</span>
+                <span>$<span id="summary-subtotal">0.00</span></span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping & handling:</span>
+                <span>$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Total before tax:</span>
+                <span>$<span id="summary-before-tax">0.00</span></span>
+            </div>
+            <div class="summary-row">
+                <span>Estimated tax:</span>
+                <span>$<span id="summary-tax">0.00</span></span>
+            </div>
+            <div class="summary-total">
+                <span>Order Total:</span>
+                <span>$<span id="summary-total">0.00</span></span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

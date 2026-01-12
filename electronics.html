@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+                <div class="header-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-hello">Deliver to</span>
+                        <span class="location-country">New York 10001</span>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option selected>Electronics</option>
+                        <option>Computers</option>
+                        <option>Books</option>
+                        <option>Fashion</option>
+                        <option>Home & Kitchen</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search in Electronics">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-account">
+                    <span class="account-hello">Hello, sign in</span>
+                    <span class="account-lists">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="header-orders">
+                    <span class="orders-returns">Returns</span>
+                    <span class="orders-text">& Orders</span>
+                </div>
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-item nav-all">
+                    <i class="fas fa-bars"></i> All
+                </div>
+                <a href="index.html" class="nav-item">Today's Deals</a>
+                <a href="#" class="nav-item">Customer Service</a>
+                <a href="#" class="nav-item">Registry</a>
+                <a href="#" class="nav-item">Gift Cards</a>
+                <a href="products.html" class="nav-item">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> › <span>Electronics</span>
+    </div>
+
+    <!-- Electronics Page Content -->
+    <div class="products-page">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Electronics Categories</h3>
+                <ul class="filter-list">
+                    <li><a href="#">Televisions & Video</a></li>
+                    <li><a href="#">Home Audio & Theater</a></li>
+                    <li><a href="#">Camera, Photo & Video</a></li>
+                    <li><a href="#">Cell Phones & Accessories</a></li>
+                    <li><a href="#">Headphones & Speakers</a></li>
+                    <li><a href="#">Video Games</a></li>
+                    <li><a href="#">Wearable Technology</a></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Customer Review</h3>
+                <div class="rating-filter">
+                    <label>
+                        <input type="checkbox">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        & Up
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        & Up
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price</h3>
+                <div class="price-filter">
+                    <label><input type="checkbox"> Under $25</label>
+                    <label><input type="checkbox"> $25 to $50</label>
+                    <label><input type="checkbox"> $50 to $100</label>
+                    <label><input type="checkbox"> $100 to $200</label>
+                    <label><input type="checkbox"> $200 & Above</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Brand</h3>
+                <ul class="filter-list">
+                    <li><label><input type="checkbox"> Sony</label></li>
+                    <li><label><input type="checkbox"> Samsung</label></li>
+                    <li><label><input type="checkbox"> LG</label></li>
+                    <li><label><input type="checkbox"> Apple</label></li>
+                    <li><label><input type="checkbox"> Bose</label></li>
+                    <li><label><input type="checkbox"> JBL</label></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Products Main -->
+        <main class="products-main">
+            <div class="products-header">
+                <h1>Electronics</h1>
+                <div class="products-sort">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-list">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&h=400&fit=crop" alt="Smart TV">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">55" 4K Ultra HD Smart LED TV with HDR</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(23,456)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$449.99</span>
+                            <span class="price-original">$699.99</span>
+                            <span class="price-discount">(36% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('55 inch 4K Smart TV', 449.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Bluetooth Speaker">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Portable Bluetooth Speaker - Waterproof, 360° Sound</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(18,234)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$89.99</span>
+                            <span class="price-original">$149.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Portable Bluetooth Speaker', 89.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Noise Cancelling Headphones">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Premium Noise Cancelling Wireless Headphones</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(15,678)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$179.99</span>
+                            <span class="price-original">$299.99</span>
+                            <span class="price-discount">(40% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Noise Cancelling Headphones', 179.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop" alt="Digital Camera">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">4K Mirrorless Digital Camera with 18-55mm Lens</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                            <span class="review-count">(8,901)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$799.99</span>
+                            <span class="price-original">$1,199.99</span>
+                            <span class="price-discount">(33% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('4K Digital Camera', 799.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop" alt="Smartwatch">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Advanced Smartwatch - GPS, Heart Rate, 50+ Sports Modes</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.3</span>
+                            <span class="review-count">(12,345)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$199.99</span>
+                            <span class="price-original">$349.99</span>
+                            <span class="price-discount">(43% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Advanced Smartwatch', 199.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=400&fit=crop" alt="Wireless Earbuds">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">True Wireless Earbuds - Active Noise Cancellation</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                            <span class="review-count">(20,123)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$129.99</span>
+                            <span class="price-original">$199.99</span>
+                            <span class="price-discount">(35% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Wireless Earbuds', 129.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&h=400&fit=crop" alt="Tablet">
+                        <span class="badge">Amazon's Choice</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">10.5" Tablet - 128GB, WiFi + Cellular, AMOLED Display</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                            <span class="review-count">(9,876)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$399.99</span>
+                            <span class="price-original">$549.99</span>
+                            <span class="price-discount">(27% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('10.5 inch Tablet', 399.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=400&fit=crop" alt="Gaming Console">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Next-Gen Gaming Console - 1TB, 4K Gaming</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(34,567)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$499.99</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Gaming Console', 499.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=400&fit=crop" alt="Drone">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Professional Drone with 4K Camera - GPS, 30min Flight</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.4</span>
+                            <span class="review-count">(6,789)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$599.99</span>
+                            <span class="price-original">$899.99</span>
+                            <span class="price-discount">(33% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('Professional Drone', 599.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?w=400&h=400&fit=crop" alt="VR Headset">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Virtual Reality Headset - All-in-One VR Gaming System</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6</span>
+                            <span class="review-count">(11,234)</span>
+                        </div>
+                        <div class="product-price-section">
+                            <span class="price-main">$299.99</span>
+                            <span class="price-original">$399.99</span>
+                            <span class="price-discount">(25% off)</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> FREE delivery Tomorrow</p>
+                        <button class="btn-add-cart" onclick="addToCart('VR Headset', 299.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Amazon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="confirmation-page">
+        <div class="confirmation-header">
+            <i class="fas fa-check-circle"></i>
+            <h1>Order Placed Successfully!</h1>
+            <p>Thank you for your order</p>
+        </div>
+
+        <div class="confirmation-content">
+            <div class="order-details">
+                <h2>Order Details</h2>
+                <p><strong>Order Number:</strong> <span id="order-id"></span></p>
+                <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+                <p><strong>Order Total:</strong> $<span id="order-total"></span></p>
+                
+                <div class="delivery-info-box">
+                    <h3><i class="fas fa-truck"></i> Estimated Delivery</h3>
+                    <p class="delivery-date">Tomorrow, January 13, 2026</p>
+                    <p id="delivery-address"></p>
+                </div>
+
+                <div class="order-items">
+                    <h3>Items Ordered</h3>
+                    <div id="ordered-items"></div>
+                </div>
+
+                <div class="confirmation-actions">
+                    <a href="orders.html" class="btn-view-orders">View All Orders</a>
+                    <a href="index.html" class="btn-continue-shopping">Continue Shopping</a>
+                </div>
+            </div>
+
+            <div class="confirmation-sidebar">
+                <div class="what-next">
+                    <h3>What happens next?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> We'll send a confirmation email</li>
+                        <li><i class="fas fa-check"></i> Your order is being prepared</li>
+                        <li><i class="fas fa-check"></i> We'll notify you when it ships</li>
+                        <li><i class="fas fa-check"></i> Track your package anytime</li>
+                    </ul>
+                </div>
+
+                <div class="need-help">
+                    <h3>Need Help?</h3>
+                    <p><a href="#">Track your package</a></p>
+                    <p><a href="#">Returns & refunds</a></p>
+                    <p><a href="#">Contact customer service</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get order ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+        
+        if (!orderId) {
+            window.location.href = 'index.html';
+        }
+        
+        // Load order details
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        const order = orders.find(o => o.id === orderId);
+        
+        if (order) {
+            document.getElementById('order-id').textContent = order.id;
+            document.getElementById('order-date').textContent = new Date(order.date).toLocaleDateString();
+            document.getElementById('order-total').textContent = order.total.toFixed(2);
+            
+            // Display delivery address
+            const addr = order.address;
+            document.getElementById('delivery-address').innerHTML = `
+                <strong>${addr.fullName}</strong><br>
+                ${addr.address}<br>
+                ${addr.city}, ${addr.state} ${addr.zip}<br>
+                Phone: ${addr.phone}
+            `;
+            
+            // Display ordered items
+            let itemsHTML = '';
+            order.items.forEach(item => {
+                itemsHTML += `
+                    <div class="ordered-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>Quantity: ${item.quantity}</p>
+                            <p class="item-price">$${(item.price * item.quantity).toFixed(2)}</p>
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('ordered-items').innerHTML = itemsHTML;
+        }
+    </script>
+</body>
+</html>
